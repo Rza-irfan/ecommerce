@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+}
+nav{
+    display: block;
+    background: #0082e6;
+    height: 3rem;
+    width:100%;
+}
+label.logo{
+    color:white;
+    font-size: 35px;
+    padding: 0 50px;
+    font-weight: bold;
+    justify-content: flex-start;
+    float: left;
+}
+
+nav ul {
+    margin-top: 10px;
+    float: right;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    line-height: 20px;
+    margin: 0 10px;
+    width: 10rem; /* Set a fixed width for each menu item */
+    text-align: center; /* Center the text horizontally */
+    
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #0082e6;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    cursor:pointer;
+    display: none;
+    margin-right: 10px;
+    width: 30%;
+    margin-left: auto;
+}
+#check{
+    display: none;
+}
+
+/* @media (max-width:900px){
+    label.logo{
+        font-size: 25px;
+        float: left;
+        padding: 0 15px;
+        transition: all 0.3s; 
+    }
+    nav ul li a{
+        font-size:14px;
+        transition: all 0.3s; 
+        padding: 2px 8px;
+    }
+
+} */
+@media (max-width:1200px){
+    label.logo{
+        font-size: 25px;
+        float: left;
+        padding: 0 15px;
+        transition: all 0.3s; 
+    }
+    nav ul li a{
+        font-size:13px;
+        transition: all 0.3s; 
+        padding: 1px 6px;
+    }
+    .search-container {
+        width: 80vh !important;
+        margin-left: 80px;
+    }    
+    .btm-nav{
+        height: 2.25rem;
+        margin-right: auto;
+        background-color: #0082e6;
+        width: 60%!important;
+        border-bottom-right-radius: 40px;
+      }
+      nav ul li {
+        line-height: 10px;
+        margin: 0 10px;
+        position: relative;
+        width: 7rem;
+    }
+    
+    nav ul li a {
+        font-size: 15px;
+        padding: 8px 9px;/* Make the links a block element */
+    }
+
+}
+@media (max-width:900px){
+    label.logo{
+        font-size: 25px;
+        float: left;
+        padding: 0 15px;
+        transition: all 0.3s; 
+    }
+    nav ul li a{
+        font-size:13px;
+        transition: all 0.3s; 
+        padding: 1px 6px;
+    }
+    .search-container {
+        width: 50vh !important;
+        margin-left: 30px;
+    }    
+    .btm-nav{
+        height: 2.25rem;
+        margin-right: auto;
+        background-color: #0082e6;
+        width: 80%!important;
+        border-bottom-right-radius: 40px;
+      }
+      nav ul li {
+        line-height: 10px;
+        margin: 0 10px;
+        position: relative;
+        width: 6.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 15px;
+        padding: 7px 8px;/* Make the links a block element */
+    }
+
+}
+.menu{
+    margin-top: 10px;
+}
+@media(max-width:600px){
+    nav{
+        display: flex;
+    }    
+    .checkbtn{
+        display: block;
+        margin-right: 20px;
+    }
+    ul{
+        position:absolute;
+        width:100%;
+        height:89vh;
+        background: #2c3e50;
+        top:4rem;
+        left:-100%;
+        text-align:center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background:none;
+        color:#0082e6;
+    }
+    
+    .search-container {
+        width: 40vh !important;
+        margin-left: 10px;
+    }    
+    .btm-nav-btn{
+        display: block;
+    }
+    .btns{
+        display: none !important;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+}
+    .nav-container {
+        display: flex;
+        align-items: center;
+        background-color: #0082e6;
+        height: 3rem;
+        padding: 0 20px; /* Adjust padding for horizontal centering */
+    }
+  
+  /* Style the search container */
+  .search-container {
+    align-items: center;
+    width: 35%;
+    margin-left: 50px;
+  }
+  
+  /* Style the search form */
+  .search-form {
+    display: flex;
+  }
+  
+  .search-form input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-top-left-radius: 5px;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .search-button {
+    background-color: #3498db;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    
+  }
+  
+  .search-button:hover {
+    background-color: #2684ff;
+  }
+
+  .btm-nav{
+    height: 2.75rem;
+    margin-right: auto;
+    background-color: #0082e6;
+    width: 60%;
+    position: relative;
+    border-bottom-right-radius: 40px;
+  }
+  .nav-links{
+    display: flex;
+    float: left;
+  }
+
+
+  .btns{
+    display: flex;
+    margin-left: auto;
+    background-color: chartreuse;
+  }
+  
+  .profile-content {
+    display: none;
+    position:absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+    right:10px;
+    height: 20%;
+    border: 4px solid #0082e6;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .profile:hover .profile-content {
+    display: block;
+  }
+
+  .button1 {
+    height: 3rem;
+    width: 4rem;
+    background-color: #0082e6; 
+    border: none;
+  }
+  
+  .button1:hover {
+    background-color: #0171f1;
+    color: white;
+  }
+  .cart-btn{
+    background-color: chocolate;
+  }
+  .profile{
+    background-color:darkred;
+  }
+  .cart-icon {
+    color: #ffffff; /* Change the color to white */
+    font-size: 20px; /* Increase the size as needed */
+  }
+  .user-icon{
+    color: #ffffff; /* Change the color to white */
+    font-size: 20px;
+  }
+  .cart button :hover{
+    font-size: 25px;
+  }
+  .profile button :hover{
+    font-size: 25px;
+  }
+  .btm-nav-btn{
+    display: flex;
+    width: 30%;
+    margin-top: -40px;
+    margin-left: auto;
+    background-color: #0082e6;
+  }
+  .logout{
+    background-color: rgb(215, 3, 3);;
+    color: aliceblue;
+    margin-top: 25%;
+    padding: 4px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(241, 0, 0, 0.05),
+  }
+  .logout:hover{
+    background-color: red;
+    padding: 6px;
+  }

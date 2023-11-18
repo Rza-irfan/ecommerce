@@ -1,0 +1,38 @@
+.product-grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px; 
+    width: 80%;
+    padding: 1rem;
+   
+  }
+  
+  .product {
+    width: 13rem;
+    min-height: 18rem;
+    max-height: 18rem;
+    text-align: center;
+    background-color:#ffffff ;
+    margin-top: 1rem;
+  }
+  .product:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .notclicked{
+    color:white;
+    width:6rem;
+    border-radius:4px;
+    margin-left:auto;
+    background-color:#0082e6;
+    border:none
+  }
+  .clicked{
+    color:white;
+    width:6rem;
+    border-radius:4px;
+    margin-left:auto;
+    background-color:#11d835;
+    border:none
+  }
