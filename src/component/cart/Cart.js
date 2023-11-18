@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useSelector,useDispatch} from 'react-redux'; 
+import React from "react";
 import "../cart/Cart.css";
-import CartItem from "./CartItem";
+// import CartItem from "./CartItem";
 // Functional component for rendering cart items
 // Define the styled table component
 let total = 69;
@@ -11,7 +10,7 @@ function Cart() {
     <div>
       <div className="cart">
         
-        <CartItem/>
+        {/* <CartItem/> */}
 
         <div className="price-details">
         

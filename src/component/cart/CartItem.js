@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useSelector,useDispatch} from 'react-redux'; 
-import {remove} from '../../redux/reducer/reducer';
+import React from "react";
 
 
 function CartItem() {
-    const dispatch =useDispatch();
-
-    const cartItems = useSelector(state=>state.cart)
+    const cartItems=[];
 
     const removeFromCart=(item)=>{
-        dispatch(remove);
     }
 
     const increment=()=>{

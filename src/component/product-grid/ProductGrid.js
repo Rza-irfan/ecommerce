@@ -1,19 +1,14 @@
 
 import React, { useEffect, useState } from 'react'
 import '../product-grid/ProductGrid.css'
-import { useDispatch ,useSelector} from 'react-redux'; 
-import { add } from '../../redux/reducer/reducer';
 const Product=({item})=>{
-    console.log("ssas");
     const [buttonClicked, setButtonClicked] = useState(false);
 
-    const dispatch = useDispatch();
-    const cartItems = useSelector(state => state.cart.items);
+    // const cartItems = useSelector(state => state.cart.items);
     const handleAddToCart = () => {
         setButtonClicked(!buttonClicked);
-        dispatch(add(item));
     };
-    console.log(cartItems);
+
     return(
         <div className="product" >
             <img alt="failed to load" style={{width:"100%",height:"80%"}} src={item.image}/>

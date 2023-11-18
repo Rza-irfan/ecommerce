@@ -6,13 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { Provider } from 'react-redux'; 
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import store from '../src/redux/store/store'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 library.add(fas);
 root.render(
-  <Provider store={store}> 
-    <App /> 
-  </Provider>, 
+    <App />, 
   document.getElementById('root'), 
 );
 
