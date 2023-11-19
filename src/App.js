@@ -1,13 +1,16 @@
 
 import './App.css';
 
-import Cart from './component/cart/Cart';
-import { Home } from './component/home/Home';
+import Cart from './pages/cart/Cart';
+import { Home } from './pages/home/Home';
 import {createBrowserRouter,createRoutesFromElements,RouterProvider,Route,Link,Outlet,Routes} from 'react-router-dom'
-import {Jewelery } from './component/menu/jewelery/Jewelery';
-import { Electronics } from './component/menu/electronics/Electronics';
-import { Clothing } from './component/menu/clothing/Clothing';
-import Navbar from '../src/component/navbar/Navbar.js'
+import Navbar from './components/navbar/Navbar';
+import store from './store/store';
+import Clothing from '../src/pages/clothing/Clothing'
+import {Electronics} from '../src/pages/electronics/Electronics'
+import {Jewelery} from '../src/pages/jewelery/Jewelery'
+import { Provider } from 'react-redux'; 
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,9 +25,7 @@ function App() {
   );
   return (
     <div className="App">
-      {console.log("S")}
       <RouterProvider router={router}>
-      
         <Routes />
       </RouterProvider>
     </div>
@@ -35,10 +36,12 @@ export default App;
 const Root = () => {
   return (
     <>
-      <Navbar />
-      <div>
-        <Outlet />
-      </div>
+      <Provider store={store}>
+        <Navbar />
+        <div>
+          <Outlet />
+        </div>
+      </Provider>
     </>
   );
 };
